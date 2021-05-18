@@ -5,6 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Example1 from './Example1';
 import Example2 from './Example2';
+import Clock from './Clock';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -12,6 +13,12 @@ ReactDOM.render(
   </React.StrictMode>,
   document.getElementById('root')
 );
+
+
+// ReactDOM.render(
+//   <Clock  />,
+//   document.getElementById('root')
+// );
 
 if (module.hot) {
   module.hot.accept();
