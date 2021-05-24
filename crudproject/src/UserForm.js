@@ -84,11 +84,11 @@ class UserForm extends Component {
           >
             {({ isSubmitting }) => (
               <Form>
-                <Field type="email" name="email" />
+                <Field type="email" name="email" /> :Email
                 <span style={{ color:"red", fontWeight: "bold" }}>
                   <ErrorMessage name="email" component="div" />
                 </span>                               
-                <Field type="username" name="username" />
+                <Field type="username" name="username" /> :Username
                 <span style={{ color:"red", fontWeight: "bold" }}>
                   <ErrorMessage name="username" component="div" />
                 </span>                
