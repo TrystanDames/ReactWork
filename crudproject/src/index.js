@@ -3,11 +3,12 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import firebase from 'firebase/app';
+import firebase from 'firebase';
 
 var firebaseConfig = {
   apiKey: "AIzaSyDXR4mgiOi0XgeOV7c7oBEqlfRvMNzPkFU",
   authDomain: "crued-react.firebaseapp.com",
+  databaseURL: "https://crued-react-default-rtdb.europe-west1.firebasedatabase.app",
   projectId: "crued-react",
   storageBucket: "crued-react.appspot.com",
   messagingSenderId: "149871555868",

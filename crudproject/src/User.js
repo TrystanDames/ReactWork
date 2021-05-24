@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import firebase from 'firebase';
-import {Table} from 'react-bootstrap';
+import {Table, Button} from 'react-bootstrap';
 
 class User extends Component {
 
@@ -8,8 +8,9 @@ class User extends Component {
         super(props);
         this.state = {
             users: []
-        }
-    };
+        };
+        this.add = this.add.bind(this);
+    }
 
     componentDidMount() {
         firebase.database().ref('/')
@@ -26,6 +27,10 @@ class User extends Component {
         });
     }
 
+    add(e) {
+        this.props.history.push("/add")
+    }
+
     render() {
         const listUsers = this.state.users.map(user =>
         <tr key={user.key}>
@@ -38,6 +43,7 @@ class User extends Component {
         
         return (
             <div>
+                <Button variant="primary" onClick={this.add}>Add User</Button>
                 <Table striped bordered hover>
                 <thead>
                     <tr>

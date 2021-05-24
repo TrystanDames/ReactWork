@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import firebase from 'firebase';
 import User from './User';
+import UserForm from './UserForm';
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
 
 class App extends Component {
@@ -16,6 +17,7 @@ class App extends Component {
         <BrowserRouter>
           <div>
             <Switch>
+              <Route path="/add" component={UserForm} />
               <Route exact path="/" component={User} />
               <Route path="/*" component={NotFound} />
             </Switch>
