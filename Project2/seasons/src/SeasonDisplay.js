@@ -14,11 +14,14 @@ class SeasonDisplay extends Component {
     render() {
 
         const season = getSeason(this.props.lat, new Date().getMonth());
-        console.log(season)
+        const text = season === 'winter' ? 'Burr, it is chilly' : 'Lets hit the beach'
+        const icon = season === 'winter' ? 'snowflake' : 'sun';
 
         return(
             <div>
-                Season Display
+                <i className={`${icon} icon`} />
+                <h1>{text}</h1>
+                <i className={`${icon} icon`} />
             </div>
         );
     };
