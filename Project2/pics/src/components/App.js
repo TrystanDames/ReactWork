@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import SearchBar from './SearchBar';
+import axios from 'axios';
 
 class App extends Component {
 
