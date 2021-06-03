@@ -15,17 +15,18 @@ class Accordion extends Component {
     };
 
     renderedItems() {
+      const active = this.index === this.activeIndex ? 'active' : '';
       return this.props.items.map((item, index) => {
         return (
           <React.Fragment key={item.title}>
               <div
-                className="title active"
+                className={"title " + active}
                 onClick={() => this.onTitleClick(index)}
               >
                 <i className="dropdown icon"></i>
                 {item.title}
               </div>
-              <div className="content active">
+              <div className={"content " + active}>
                 <p>{item.content}</p>
               </div>
           </React.Fragment>
@@ -37,7 +38,6 @@ class Accordion extends Component {
         return(
             <div className="ui styled accordion">
                 {this.renderedItems()}
-                <h1>{this.state.activeIndex}</h1>
             </div>
         );
     };
@@ -52,13 +52,14 @@ class Accordion extends Component {
 //     };
   
 //     const renderedItems = items.map((item, index) => {
+//       const active = index === activeIndex ? 'active' : '';
 //       return (
 //         <React.Fragment key={item.title}>
-//           <div className="title active" onClick={() => onTitleClick(index)}>
+//           <div className={`title ${active}`} onClick={() => onTitleClick(index)}>
 //             <i className="dropdown icon"></i>
 //             {item.title}
 //           </div>
-//           <div className="content active">
+//           <div className={`content ${active}`}>
 //             <p>{item.content}</p>
 //           </div>
 //         </React.Fragment>
@@ -68,7 +69,6 @@ class Accordion extends Component {
 //     return(
 //       <div className="ui styled accordion">
 //         {renderedItems}
-//         <h1>{activeIndex}</h1>
 //       </div>
 //     );
 //   };
