@@ -1,4 +1,5 @@
 import React, {Component, useState, useEffect} from 'react';
+import axios from 'axios';
 
 // class Search extends Component {
 
@@ -31,8 +32,12 @@ const Search = () => {
     const [term, setTerm] = useState('');
 
     useEffect(() => {
-
-    }, [term])
+        const search = async () => {
+            await axios.get('asldkfj')
+        };
+        
+        search();
+    }, [term]);
 
     return(
         <div>
