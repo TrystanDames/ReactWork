@@ -12,6 +12,7 @@ const Dropdown = ({ options, selected, onSelectedChange }) => {
 
             setOpen(false);
         };
+        
 
         document.body.addEventListener('click', onBodyClick);
 
@@ -22,7 +23,8 @@ const Dropdown = ({ options, selected, onSelectedChange }) => {
 
     const renderedOptions = options.map((option) => {
         if (option.value === selected.value) {
-            return null;
+            const div = document.getElementById("text");
+            return null, div.style.color=selected.value;
         }
 
         return (
@@ -35,6 +37,7 @@ const Dropdown = ({ options, selected, onSelectedChange }) => {
             </div>
         );
     });
+    
 
     return (
         <div ref={ref} className="ui form">
@@ -51,6 +54,7 @@ const Dropdown = ({ options, selected, onSelectedChange }) => {
                     </div>
                 </div>
             </div>
+            <div id="text" className="text-change">This text will change color</div>
         </div>
     );
 };
