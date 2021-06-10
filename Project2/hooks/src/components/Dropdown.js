@@ -21,18 +21,15 @@ const Dropdown = ({label, options, selected, onSelectedChange}) => {
         };
     }, []);
 
+    //remove comments to see color but error will pop up once you change page and come back to it
+
     const renderedOptions = options.map((option) => {
         if (option.value === selected.value) {
             const div = document.getElementById("text")
-                return (
-                    null
-                    // div.style.color=option.value
-                );
-        }
-
-        if (option.value === selected.value) {
-            const div = document.getElementById("text")
-                return div.style.color=option.value
+            return (
+                null//,
+                // div.style.color=option.value
+            );
         };
 
         return (
@@ -46,8 +43,6 @@ const Dropdown = ({label, options, selected, onSelectedChange}) => {
         );
 
     });
-
-    
 
     return (
         <div ref={ref} className="ui form">
