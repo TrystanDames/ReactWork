@@ -6,11 +6,12 @@ import StreamEdit from './streams/StreamEdit';
 import StreamList from './streams/StreamList';
 import StreamShow from './streams/StreamShow';
 import Header from './Header';
+import history from '../history';
 
 const App = () => {
     return (
         <div className="ui container">
-            <BrowserRouter>
+            <Router history={history}>
                 <div>
                     <Header />
                     <Route path="/" exact component={StreamList} />
@@ -19,7 +20,7 @@ const App = () => {
                     <Route path="/streams/delete" exact component={StreamDelete} />
                     <Route path="/streams/show" exact component={StreamShow} />
                 </div>
-            </BrowserRouter>
+            </Router>
         </div>
     );
 }
