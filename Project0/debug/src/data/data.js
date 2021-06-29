@@ -25,3 +25,5 @@ const users = [
         "username": "Trys"
     }
 ];
+
+export default users;

@@ -13,9 +13,9 @@ class App extends Component {
     }
   }
 
-  getName = (number) => {
+  getName = (num) => {
     const {users} = this.state;
-    return users[number].name;
+    return users[num].name;
   }
 
   // getRandomName = () => {
