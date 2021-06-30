@@ -23,6 +23,11 @@ const users = [
         "id": 5,
         "name": "Trystan Dames",
         "username": "Trys"
+    },
+    {
+        "id": 6,
+        "name": "Kyle Vosloo",
+        "username": "Kyle"
     }
 ];
 
