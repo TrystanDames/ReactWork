@@ -1,3 +1,10 @@
 {
-    "streams": []
+  "streams": [
+    {
+      "title": "We are amazing at coding",
+      "description": "Testing out OBS here",
+      "userId": "108976640381750296383",
+      "id": 1
+    }
+  ]
 }

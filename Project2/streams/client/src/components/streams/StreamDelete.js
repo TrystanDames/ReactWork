@@ -11,7 +11,7 @@ class StreamDelete extends React.Component {
   }
 
   renderActions() {
-    const { id } = this.props.match.params;
+    const {id} = this.props.match.params;
 
     return (
       <React.Fragment>
@@ -58,3 +58,4 @@ export default connect(
   mapStateToProps,
   {fetchStream, deleteStream}
 )(StreamDelete);
+
