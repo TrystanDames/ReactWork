@@ -2,13 +2,13 @@
   "streams": [
     {
       "title": "We are amazing at coding",
-      "description": "Testing out OBS here",
+      "description": "Showing my stream app",
       "userId": "108976640381750296383",
       "id": 1
     },
     {
       "title": "New",
-      "description": "Testing the delete button",
+      "description": "Testing API",
       "userId": "108976640381750296383",
       "id": 2
     }
